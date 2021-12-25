@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom search</title>
+	<style type="text/css">
+		p, form
+		{
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<p class="fist">Here is First paragraph</p>
+
+	<p class="fist">Almost 2nd</p>
+	<p class="fist2">Premier copy</p>
+
+
+	<h1 id="heading">This is the line of Necessary</h1>
+	
+
+	<form action="">
+		<label>male</label>
+		<input type="radio" name="gender" id="">
+		<label>female</label>
+		<input type="radio" name="gender" id="">
+	</form>
+
+	<button onclick="change()">Click</button>
+
+<script type="text/javascript">
+	const change = () => {
+	
+	//directly write:
+	// document.getElementById('heading').innerHTML = "lost it";
+
+	//or reference trick: where we can create an object
+	// const headingchange =  document.getElementById('heading');
+	// headingchange.innerHTML = "lost it";
+
+
+	//dealing with class in JS: class can be multiple with same name
+	//thats why we use 's' in Elements ferom getElementsByClassName
+	// console.log(document.getElementsByClassName('fist'));
+
+
+	//calling by tagname:
+	// console.log(document.getElementsByTagName('p'));
+
+
+	//calling by Name:
+	// console.log(document.getElementsByName('gender'));
+
+
+
+	
+	//But we have query selector: querySelector &&& querySelectorAll()
+	//'querySelectorAll()' can returns all elements.
+	//On the other hand 'querySelector' returns only the first matching value.
+
+	//Both can call type of elements,
+	//Just we have to call them by the css way. Like, #id/.class/p
+
+	// document.querySelector('#heading').innerHTML = 'I changed Again';
+	// document.querySelector('.fist').innerHTML = 'I changed Again';
+	// document.querySelectorAll('.fist').innerHTML = 'I changed all';
+
+	console.log(document.querySelectorAll('.fist'));
+	}
+
+</script>
+</body>
+</html>

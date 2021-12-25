@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date-time JS</title>
+</head>
+<body>
+	<p>Click the button to display a date & time</p>
+
+	<button onclick="myfunc()">Try It</button>
+
+	<p id="demo"></p>
+	<p id="calender"></p>
+
+	<script type="text/javascript">
+		// function Myfunction() {
+		// 	var CurTime = new Date();
+		// 	CurTime.setHours(6);
+		// 	//CurTime.setHours(6).toLocaleString();
+		// 	document.getElementById('demo').innerHTML = CurTime; //if we want to return/print our function in an html file. 
+		// }
+
+		(function myfunc() {
+    		setInterval(()=> {
+    			var watch = new Date().toLocaleTimeString();
+        		// console.log(watch.toLocaleTimeString());
+        		document.getElementById('demo').innerHTML = watch;
+
+        		var calender = new Date().toLocaleDateString();
+    			document.getElementById('calender').innerHTML = calender;
+    		}, 1000)
+		})();
+	</script>
+
+</body>
+</html>
