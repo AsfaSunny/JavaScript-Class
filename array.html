@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+
+    <script>
+        // arr = [10, 20, 30, 50, 60];
+        // sum = 0;
+
+        // for (i = 0; i < 5; i++) {
+        //     document.write(arr[i] + " ");
+        //     sum = sum + arr[i];
+        // }
+
+        // document.write("<br>");
+        // document.write(sum);
+
+
+
+
+        // arr_two = new Array(4);
+
+        // for(g = 0; g <= 4; g++){
+        //     arr_two[g] = prompt("Enter Something, something little: ");
+        // }
+
+        // for(a = 0; a <= 4; a++){
+        //     document.write(a + ") " + arr_two[a] + "<br>");
+        // }
+
+
+
+
+        arr_three = [
+            ["Sunny", 21, "Male", "Computer"],
+            ["Somik", 21, "Male", "System"],
+            ["Fariah", 23, "Female", "Accounting"],
+            ["Shiahb", 21, "Male", "English"]
+        ];
+
+        document.write(arr_three.length + "<br>");
+
+        for(a = 0; a <= arr_three.length; a++) {
+            for(b = 0; b <= arr_three[a].length - 1; b++){
+                document.write(arr_three[a][b] + " ");
+            }
+            document.write("<br>");
+        }
+
+    </script>
+
+</head>
+
+</html>
