@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Object in Javascript</title>
+    <script>
+        const info = {
+            name: 'Sunny',
+            age: 22
+        }
+
+        // info = {
+        //     name: 'Somik',
+        //     age: 22
+        // }
+
+        info.name = 'Ariful Asfake Sunny';
+        info.name = 'Ahad';
+        console.log(info);
+        document.write(info.name + "<br><br>");
+
+
+
+
+
+        //array: 
+        const student = [
+            'Simran', 36, 'Barla'
+        ];
+
+        // student = [
+        //     'Sunny', 38, 'Feni'
+        // ];
+
+        student[1] = 39;
+        student[1] = 43;
+        student[0] = 'Olivia';
+        console.log(student);
+document.write(student + "<br><br>");
+
+
+
+//for in loop:
+        var obj = {
+            name: 'Sunny',
+            age: 22,
+            department: "CSE"
+        };
+
+        for(var key in obj){
+            document.write(key + ": " +obj[key] + "<br>");
+        }
+
+
+document.write("<br><br>");
+
+
+
+// map()
+        var arr = [23, 50, 12, 31, 8];
+        
+        var with_map = arr.map(tester);
+        document.write(with_map);
+
+        function tester(x){
+            return x * 2;
+        }
+
+
+document.write("<br><br>");
+
+
+        var arr_two = [
+            {name: 'Jewel', department: 'Mechanical'},
+            {name: 'Brayn Doglas', department: 'Comedy'},
+            {name: 'Rahi', department: 'Naval'}
+        ];
+
+        var b = arr_two.map(study);
+        document.write(b);
+
+        function study(y){
+            return y.name + "'s department is " + y.department + "<br>";
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
