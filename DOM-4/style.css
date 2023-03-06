@@ -1,0 +1,11 @@
+#child-A, #child-B, #child-C, #child-D, #child-E{
+    height: 50px;
+    width: 100px;
+    background-color: bisque;
+    border: 2px solid red;
+    font-size: 30px;
+    font-weight: 300;
+    position: center;
+    margin: 10px 10px;
+    /* background-color: ; */
+}
