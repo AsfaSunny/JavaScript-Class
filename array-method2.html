@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+
+    <script>
+
+        var ages = [12, 15, 17, 18, 20];
+        document.write(ages + "<br><br>");
+
+        // var a = ages.some(Tester);
+        // var a = ages.every(Tester);
+        // var a = ages.find(Tester);
+        // var b = ages.findIndex(Tester);
+        // var a = ages.filter(Tester);
+
+        // document.write(a + "<br><br>");
+        // document.write(b + "<br><br>");
+
+        // function Tester(match_age) {
+        //     return match_age >= 16;
+        // }
+
+        ages.forEach(function(Value, Index) {
+            document.write(Index + ": " + Value + "<br>");
+        });
+        
+        document.write("<br>");
+
+        ages.forEach(Array_loop);
+        function Array_loop(Value, Index) {
+            document.write(Index + ": " + Value + "<br>");
+        }
+
+    </script>
+
+</head>
+
+</html>
