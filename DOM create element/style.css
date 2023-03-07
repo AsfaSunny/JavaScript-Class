@@ -1,0 +1,26 @@
+h1{
+    background-color: bisque;
+    color: purple;
+    font-size: 30px;
+    font-weight: 300;
+    position: center;
+    margin: 10px 10px;
+    /* background-color: ; */
+}
+
+h2{
+    background-color: orange;
+    color: blue;
+    font-size: 30px;
+    font-weight: 500;
+    position: center;
+    margin: 10px 10px;
+    /* background-color: ; */
+}
+
+
+#d_element {
+    height: 400px;
+    background-color: cyan;
+    border: 2px solid purple;
+}
