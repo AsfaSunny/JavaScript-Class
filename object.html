@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in Javascript</title>
+    <script>
+        var firstObj = {
+            firstName: 'Ariful',
+            lastName: 'Sunny',
+            age: 22,
+            language: ['Javascript', 'Python', 'C'],
+            salary: function() {
+                return 25000;
+            },
+            FullName: function(fn, ln) {
+                // fn = 'Asfake';
+                // ln = 'Sunny';
+                return fn + ' ' + ln;
+            },
+            SecondFullName: function() {
+                return this.firstName + ' ' + this.lastName;
+            },
+            UnderObj: {
+                framework: 'NodeJs',
+                database: 'MongoDB'
+            },
+            programming: {
+                framework: 'Python',
+                database: {
+                    main: 'MongoDB',
+                    primary: 'PostgreSQL'
+                }
+            }
+        }
+
+        console.log(firstObj);
+
+        document.write(firstObj.age + "<br><br>");
+
+        document.write(firstObj.language + "<br><br>");
+        document.write(firstObj.language[2] + "<br><br>");
+
+        document.write(firstObj.FullName('Ahad', 'Somik') + '<br><br>');
+        document.write(firstObj.SecondFullName() + "<br><br>");
+
+        document.write(firstObj.UnderObj.framework + "<br><br>");
+        document.write(firstObj.UnderObj + "<br><br>");
+
+        document.write(firstObj.programming.database.main + "<br><br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
