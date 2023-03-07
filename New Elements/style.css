@@ -1,0 +1,26 @@
+h1{
+    background-color: rgb(234, 255, 0);
+    color: rgb(133, 0, 133);
+    font-size: 30px;
+    font-weight: 300;
+    position: center;
+    margin: 10px 10px;
+    /* background-color: ; */
+}
+
+h2{
+    background-color: rgb(0, 151, 244);
+    color: rgb(112, 255, 138);
+    font-size: 30px;
+    font-weight: 500;
+    position: center;
+    margin: 10px 10px;
+    /* background-color: ; */
+}
+
+
+#d_element {
+    height: 400px;
+    background-color: rgb(255, 177, 203);
+    border: 2px solid purple;
+}
