@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location and History Object BOM</title>
+</head>
+<body>
+    <h1>Location History</h1>
+    
+    <button onclick="newFunction()">Click</button>
+    <button onclick="backFunction()">Back</button>
+    <button onclick="ForwardFunction()">Forward</button>
+    <button onclick="GoFunction()">Go Anywhere</button>
+    <script>
+        function newFunction(){
+            location.href = "http://github.com/AsfaSunny";
+        }
+
+        function backFunction(){
+            history.back();
+        }
+
+        function ForwardFunction(){
+            history.forward();
+        }
+
+        function GoFunction(){
+            history.go(-2);
+            history.go(1);
+            history.go(-1);
+        }
+    </script>
+</body>
+</html>

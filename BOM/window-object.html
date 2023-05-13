@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Heigh And Width</title>
+</head>
+<body onresize="ResizeFunction()">
+    
+
+    <script>
+        function ResizeFunction () {
+            console.clear();
+            var innerheight = window.innerHeight;
+            console.log('Inner Height: ' + innerheight);
+
+            var outerheight = window.outerHeight;
+            console.log('Inner Height: ' + outerheight);
+
+            var innerWidth = window.innerWidth;
+            console.log('Inner Height: ' + innerWidth);
+
+            var outerwidth = window.outerWidth;
+            console.log('Inner Height: ' + outerwidth);
+        }
+    </script>
+</body>
+</html>

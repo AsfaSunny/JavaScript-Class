@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Heigh And Width</title>
+</head>
+<body>
+    <button onclick="OpenWindow()">Open Window</button>
+    <!-- <iframe id="frame_window" src="" frameborder="2" height="300px"></iframe> -->
+    <button onclick="closeWindow()">Close Window</button>
+
+    <!-- <button onclick="resizeWindow()"">Resize Window</button> -->
+    <script>
+        var myWindow;
+        function OpenWindow () {
+            // window.open("https://www.facebook.com/", "_parent");
+            myWindow = window.open("https://www.facebook.com/", "", "width=300px, height=500px, left=500px, top=500px");
+        }
+
+        function closeWindow() {
+            myWindow.close();
+        }
+
+        
+    </script>
+</body>
+</html>
