@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fname = "Ariful";
+        let mname = "Asfake";
+        let course = "Laravel";
+
+        function info_gra(first, middle, main_course){
+            let fullname = first + " " + middle;
+            return {fullname, main_course};
+        }
+
+        console.log(info_gra(fname, mname, course));
+        let os = info_gra(fname, mname, course);
+        
+        console.log('====================================');
+        console.log(os.fullname);
+        console.log('====================================');
+    </script>
+</body>
+</html>
