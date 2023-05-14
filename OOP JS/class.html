@@ -29,12 +29,18 @@
                 console.log("Student name is " + this.studentname + " ande age is " + this.studentage);
                 console.log('====================================');
             }
+
+            static WelStatic(){
+                console.log(`This is from static function, Mr. ${this.studentname}`);
+            }
         }
 
         let a = new myHlo('Sunny', 23);
         a.message();
         a.greetings();
         a.studentInfo();
+
+        myHlo.WelStatic();
     </script>
 </body>
 </html>
