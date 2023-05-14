@@ -9,18 +9,32 @@
 <body>
     <script>
         class myHlo{
+            constructor(name, age){
+                console.log('This message is bought to you by constructor function.');
+                
+                this.studentname = name;
+                this.studentage = age;
+            }
+
             message(){
-                document.write('This is first class i created in oop js');
+                document.write('This is first class i created in oop js' + '<br>');
             }
 
             greetings(){
                 document.write('Hey, Everyone this is also from class');
             }
+
+            studentInfo(){
+                console.log('====================================');
+                console.log("Student name is " + this.studentname + " ande age is " + this.studentage);
+                console.log('====================================');
+            }
         }
 
-        let a = new myHlo();
+        let a = new myHlo('Sunny', 23);
         a.message();
         a.greetings();
+        a.studentInfo();
     </script>
 </body>
 </html>
