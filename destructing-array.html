@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = [
+            "Sunny",
+            22,
+            'Dhaka',
+            [
+                'male',
+                'Islam'
+            ]
+        ];
+
+        // let [name, age, city] = user;
+        let [name, age, city, [gender, religion]] = user;
+        
+        console.log('====================================');
+        console.log(name);
+        console.log(age);
+        console.log(city);
+        console.log(gender);
+        console.log(religion);
+
+        let [new_name, ...args] = user;
+        console.log('====================================');
+        console.log(new_name);
+        console.log(args);
+
+    </script>
+</body>
+</html>
