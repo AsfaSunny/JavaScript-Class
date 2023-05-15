@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class in JS OOP</title>
+</head>
+<body>
+    <script>
+        class employee{
+            constructor(name, salary){
+                console.log('This message is bought to you by constructor function.');
+                
+                this.studentname = name;
+                this.studentsalary = salary;
+            }
+
+            message(){
+                document.write(`<h3>Employee Class</h3>
+                His name is: ${this.studentname} <br>
+                 and salary is: ${this.studentsalary} <br>`);
+
+                console.log('this is from parent class.');
+            }
+        }
+
+        class manager extends employee {
+            message(){
+                let ta = 2000;
+                let pa = 1500;
+                let main_salary = this.studentsalary + ta + pa;
+
+                document.write(`<h3>Manager Class</h3>
+                His name is: ${this.studentname} <br>
+                 and salary is: ${main_salary} <br>`);
+
+                console.log('this is from child one class.');
+            }
+        }
+
+        class tester extends manager {
+
+        }
+
+
+        let a = new manager('Sunny', 23000);
+        let b = new employee('Shakib', 20000);
+        let c = new tester('Hasib', 15000);
+        
+        a.message();
+        b.message();
+        c.message();
+    </script>
+</body>
+</html>
