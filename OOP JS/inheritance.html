@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class in JS OOP</title>
+</head>
+<body>
+    <script>
+        class employee{
+            constructor(name, age){
+                console.log('This message is bought to you by constructor function.');
+                
+                this.studentname = name;
+                this.studentage = age;
+
+                document.write('His name is: ' + this.studentname + ' and age is: ' + this.studentage + '<br>');
+            }
+
+            message(){
+                document.write('This is first class i created in oop js' + '<br>');
+
+                console.log('this is from parent class.');
+            }
+        }
+
+        class manager extends employee {
+            message(){
+                super.message();
+                console.log('this is from child class.');
+            }
+        }
+
+        let a = new manager('Sunny', 23);
+        a.message();
+    </script>
+</body>
+</html>
