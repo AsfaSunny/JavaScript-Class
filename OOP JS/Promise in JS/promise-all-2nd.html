@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise.all() method</title>
+</head>
+<body>
+    <script>
+        let promiseCalling = function(returnData, returnMsg) {
+            return function(resolveAll, rejectAll){
+                setTimeout(() => {
+                    console.log(`The ${returnMsg} resolved`);
+                    resolveAll(returnData);
+                }, returnData * 100);
+            }
+        }
+
+        let prom_1 = new Promise(promiseCalling(20, 'First Promise'));
+        let prom_2 = new Promise(promiseCalling(30, 'Second Promise'));
+        let prom_3 = new Promise(promiseCalling(40, 'Third Promise'));
+        let prom_4 = new Promise(function(resolve, reject){
+            reject('4th promise is rejected');
+        });
+        
+        var total = 0;
+        Promise.all([prom_1, prom_2, prom_3, prom_4]).then((result) => {
+            for (var i in result) {
+               total += result[i];
+            }
+            console.log(`Total of Sum: ${total}`);
+            console.log(`Result: ${result}`);
+        }).catch((err) => {
+            console.log(`Error: ${err}`);
+        });
+    </script>
+    
+</body>
+</html>
