@@ -8,17 +8,17 @@
 </head>
 <body>
     <script>
-        let complete = true;
+        function prom_2(complete){
+            return new Promise(function(resolve, reject){
+                if(complete){
+                    resolve("Success Result again");
+                } else {
+                    reject('Failed result again');
+                }
+            });
+        }
 
-        let prom_1 = new Promise(function(resolve, reject){
-            if(complete){
-                resolve("Success Result.");
-            } else {
-                reject('Failed result');
-            }
-        });
-
-        console.log(prom_1);
+        console.log(prom_2(true));
     </script>
 </body>
 </html>
