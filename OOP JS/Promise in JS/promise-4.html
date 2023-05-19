@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        function prom_2(complete){
+            return new Promise(function(resolve, reject){
+                console.log("Wait a few minutes. Results are coming.");
+                setTimeout(() => {
+                    if(complete){
+                        resolve("Success Result in timeout");
+                    } else {
+                        reject('Failed result in timeout');
+                    }
+                }, 3000);
+            });
+        }
+
+        let output_fulfilment = (result) => {
+            console.log(result);
+        }
+
+        let output_rejection = (err) => {
+            console.log(err);
+        }
+        
+        // prom_2(false).then(output_fulfilment).catch(output_rejection);
+
+        prom_2(false).then((result) => {
+            console.log(result);
+        }).catch((err) => {
+            console.log(err);
+        });
+    </script>
+</body>
+</html>
