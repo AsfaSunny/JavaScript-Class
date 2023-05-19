@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <script>
+        function prom_2(){
+            return new Promise(function(resolve, reject){
+                console.log("Wait a few minutes. Results are coming.");
+
+                setTimeout(() => {
+                    $.get("https://jsonplaceholder.typicode.com/photos", function(json_data){
+                        resolve(json_data);
+                    }).fail(err => {
+                        reject('Failed to load JSON or something missing.');
+                    });
+                }, 2000);
+            });
+        }
+
+        prom_2().then((result) => {
+            console.log(result);
+        }).catch((err) => {
+            console.log(err);
+        });
+    </script>
+</body>
+</html>
