@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        function prom_2(complete){
+            return new Promise(function(resolve, reject){
+                if(complete){
+                    resolve("Success Result again");
+                } else {
+                    reject('Failed result again');
+                }
+            });
+        }
+
+        let output_fulfilment = (result) => {
+            console.log(result);
+        }
+
+        let output_rejection = (err) => {
+            console.log(err);
+        }
+        
+        prom_2(true).then(output_fulfilment);
+        prom_2(false).catch(output_rejection);
+    </script>
+</body>
+</html>
