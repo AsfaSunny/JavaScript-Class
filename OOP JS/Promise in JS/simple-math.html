@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        function prom_2(a, b){
+            return new Promise(function(resolve, reject){
+                console.log("Wait a few minutes. Results are coming.");
+
+                var c = a / b;
+
+                setTimeout(() => {
+                    if(a, b){
+                        resolve(`Answer : ${c}`);
+                    } else {
+                        reject('Failed to calculate.');
+                    }
+                }, 3000);
+            });
+        }
+
+        prom_2(10, 0).then((result) => {
+            console.log(result);
+        }).catch((err) => {
+            console.log(err);
+        });
+    </script>
+</body>
+</html>
